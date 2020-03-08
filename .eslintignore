@@ -11,3 +11,4 @@ dist
 *.md
 *.log
 *.lock
+*.js

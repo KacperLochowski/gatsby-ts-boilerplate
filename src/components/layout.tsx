@@ -1,8 +1,11 @@
 import * as React from 'react'
+import { ThemeProvider } from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import { theme } from 'src/utils/theme'
+import { GlobalStyles } from 'src/utils/globalStyles'
+
 import { Header } from './header'
-import './layout.css'
 
 export const Layout: React.FC = ({ children }) => {
   const data: any = useStaticQuery(graphql`
@@ -16,7 +19,8 @@ export const Layout: React.FC = ({ children }) => {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -30,6 +34,6 @@ export const Layout: React.FC = ({ children }) => {
           © {new Date().getFullYear()}, Built with <a href='https://www.gatsbyjs.org'>Gatsby</a>
         </footer>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
