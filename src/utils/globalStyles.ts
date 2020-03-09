@@ -1,6 +1,7 @@
+import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyles: any = createGlobalStyle`
+export const GlobalStyles: React.ComponentClass = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
