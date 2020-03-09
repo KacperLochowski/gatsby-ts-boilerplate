@@ -160,8 +160,10 @@
     "@typescript-eslint/typedef": [
       "error",
       {
+        "arrayDestructuring": true,
         "arrowParameter": false,
-        "variableDeclaration": true
+        "variableDeclaration": true,
+        "propertyDeclaration": true
       }
     ]
     // TODO: enable the lines below when refactoring
