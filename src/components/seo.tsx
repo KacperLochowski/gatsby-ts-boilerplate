@@ -1,15 +1,17 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import Helmet from 'react-helmet'
+import Helmet, { HelmetProps } from 'react-helmet'
 
-interface SEOProps {
+import logo from 'src/images/gatsby-icon.png'
+
+interface SeoProps extends HelmetProps {
   description?: string
   lang?: string
   meta?: any[]
-  title: string
+  url?: string
 }
 
-export const SEO: React.FC<SEOProps> = ({ description = '', lang = 'en', meta = [], title }) => {
+export const SEO: React.FC<SeoProps> = ({ description, lang = 'en', meta = [], title, url }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,8 +26,6 @@ export const SEO: React.FC<SEOProps> = ({ description = '', lang = 'en', meta = 
     `
   )
 
-  const metaDescription: string = description || site.siteMetadata.description
-
   return (
     <Helmet
       htmlAttributes={{
@@ -36,19 +36,31 @@ export const SEO: React.FC<SEOProps> = ({ description = '', lang = 'en', meta = 
       meta={[
         {
           name: 'description',
-          content: metaDescription,
+          content: description,
         },
         {
           property: 'og:title',
           content: title,
         },
         {
+          property: 'og:url',
+          content: url,
+        },
+        {
+          property: 'og:image',
+          content: logo,
+        },
+        {
           property: 'og:description',
-          content: metaDescription,
+          content: description,
         },
         {
           property: 'og:type',
           content: 'website',
+        },
+        {
+          name: 'og:site_name',
+          content: title,
         },
         {
           name: 'twitter:card',
@@ -56,15 +68,19 @@ export const SEO: React.FC<SEOProps> = ({ description = '', lang = 'en', meta = 
         },
         {
           name: 'twitter:creator',
-          content: site.siteMetadata.author,
+          content: '@lochowski_',
         },
         {
-          name: 'twitter:title',
-          content: title,
+          name: 'twitter:image:alt',
+          content: '',
         },
         {
-          name: 'twitter:description',
-          content: metaDescription,
+          property: 'fb:app_id',
+          content: '',
+        },
+        {
+          name: 'twitter:site',
+          content: '',
         },
       ].concat(meta)}
     />
