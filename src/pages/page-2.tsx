@@ -2,9 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { Layout } from 'src/components/layout/layout'
-import { SEO } from 'src/components/seo'
+import SEO from 'src/components/seo'
 
-const SecondPage: React.FC = () => (
+interface Props {}
+
+const SecondPage: React.FC<Props> = () => (
   <Layout>
     <SEO title='Page two' />
     <h1>Hi from the second page</h1>

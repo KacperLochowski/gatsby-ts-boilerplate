@@ -7,7 +7,9 @@ import { GlobalStyles } from 'src/theme/globalStyles'
 
 import { Header } from '../header'
 
-export const Layout: React.FC = ({ children }) => {
+interface Props {}
+
+export const Layout: React.FC<Props> = ({ children }) => {
   const data: any = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

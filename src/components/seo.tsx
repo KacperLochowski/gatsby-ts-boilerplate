@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
-import Helmet, { HelmetProps } from 'react-helmet'
+import { HelmetProps, Helmet } from 'react-helmet'
 
 import logo from 'src/images/gatsby-icon.png'
 
@@ -11,7 +11,7 @@ interface SeoProps extends HelmetProps {
   url?: string
 }
 
-export const SEO: React.FC<SeoProps> = ({ description, lang = 'en', meta = [], title, url }) => {
+const SEO: React.FC<SeoProps> = ({ description, lang = 'en', meta = [], title, url }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -86,3 +86,5 @@ export const SEO: React.FC<SeoProps> = ({ description, lang = 'en', meta = [], t
     />
   )
 }
+
+export default SEO
