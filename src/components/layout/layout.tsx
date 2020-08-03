@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { theme } from 'src/theme/theme'
 import { GlobalStyles } from 'src/theme/globalStyles'
 
-import { Header } from '../header'
+import Header from 'src/components/header'
 
 interface Props {}
 

@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { Layout } from 'src/components/layout/layout'
-import SEO from 'src/components/seo'
+import Seo from 'src/components/seo'
 
-interface Props {}
+interface NotFoundPageProps {}
 
-const NotFoundPage: React.FC<Props> = () => (
+const NotFoundPage: React.FC<NotFoundPageProps> = () => (
   <Layout>
-    <SEO title='404: Not found' />
+    <Seo title='404: Not found' />
     <h1>NOT FOUND</h1>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </Layout>

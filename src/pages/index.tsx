@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { Layout } from 'src/components/layout/layout'
-import SEO from 'src/components/seo'
+import Seo from 'src/components/seo'
 import Image from 'src/components/image'
 
-interface Props {}
+interface IndexPageProps {}
 
-const IndexPage: React.FC<Props> = () => (
+const IndexPage: React.FC<IndexPageProps> = () => (
   <Layout>
-    <SEO title='Home' />
+    <Seo title='Home' />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

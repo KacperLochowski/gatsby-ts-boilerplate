@@ -1,10 +1,10 @@
-import React from 'react'
+import { ComponentClass } from 'react'
 import { createGlobalStyle } from 'styled-components'
 
 import OpenSansWoof2 from 'src/fonts/open-sans-v17-latin-regular.woff2'
 import OpenSansWoof from 'src/fonts/open-sans-v17-latin-regular.woff'
 
-export const GlobalStyles: React.ComponentClass = createGlobalStyle`
+export const GlobalStyles: ComponentClass = createGlobalStyle`
   @font-face {
     font-family: 'Open Sans';
     font-style: normal;

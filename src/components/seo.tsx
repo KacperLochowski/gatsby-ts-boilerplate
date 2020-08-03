@@ -11,7 +11,7 @@ interface SeoProps extends HelmetProps {
   url?: string
 }
 
-const SEO: React.FC<SeoProps> = ({ description, lang = 'en', meta = [], title, url }) => {
+const Seo: React.FC<SeoProps> = ({ description, lang = 'en', meta = [], title, url }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -87,4 +87,4 @@ const SEO: React.FC<SeoProps> = ({ description, lang = 'en', meta = [], title, u
   )
 }
 
-export default SEO
+export default Seo

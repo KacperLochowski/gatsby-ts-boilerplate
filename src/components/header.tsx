@@ -5,7 +5,7 @@ interface HeaderProps {
   siteTitle: string
 }
 
-export const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
+const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
   <header
     style={{
       background: 'rebeccapurple',
@@ -33,3 +33,5 @@ export const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
     </div>
   </header>
 )
+
+export default Header
