@@ -158,7 +158,7 @@
       {
         "arrayDestructuring": true,
         "arrowParameter": false,
-        "variableDeclaration": true,
+        "variableDeclaration": false,
         "propertyDeclaration": true
       }
     ]

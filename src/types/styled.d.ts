@@ -1,17 +1,22 @@
 import 'styled-components'
 
+interface Breakpoints {
+  huge: string
+  bigDesktop: string
+  desktop: string
+  bigTablet: string
+  tablet: string
+  phone: string
+}
 interface Font {
-  family: FontFamily
   weight: FontWeight
   size: FontSize
 }
-
-interface FontFamily {
-  openSans: string
-}
-
 interface FontWeight {
   regular: string
+  medium: string
+  semi: string
+  bold: string
 }
 
 interface FontSize {
@@ -20,21 +25,32 @@ interface FontSize {
 }
 
 interface FontSizeHeader {
+  xs: string
+  s: string
   m: string
+  l: string
+  xl: string
+  xxl: string
 }
 
 interface FontSizeBody {
+  s: string
   m: string
+  l: string
+  xl: string
+  xxl: string
 }
 
 interface Colors {
-  main: string
-  secondary: string
+  red: string
+  gray: string
+  darkgray: string
+  lightgray: string
 }
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
+  export interface DefaultTheme extends Colors {
     font: Font
-    colors: Colors
+    mq: Record<keyof Breakpoints, string>
   }
 }

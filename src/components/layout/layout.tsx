@@ -7,10 +7,18 @@ import { GlobalStyles } from 'src/theme/globalStyles'
 
 import Header from 'src/components/header'
 
-interface Props {}
+interface StaticQueryProps {
+  site: {
+    siteMetadata: {
+      title: string
+    }
+  }
+}
 
-export const Layout: React.FC<Props> = ({ children }) => {
-  const data: any = useStaticQuery(graphql`
+interface LayoutProps {}
+
+export const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const data: StaticQueryProps = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -25,9 +33,6 @@ export const Layout: React.FC<Props> = ({ children }) => {
       <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with <a href='https://www.gatsbyjs.org'>Gatsby</a>
-      </footer>
     </ThemeProvider>
   )
 }
