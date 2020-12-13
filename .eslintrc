@@ -162,8 +162,5 @@
         "propertyDeclaration": true
       }
     ]
-    // TODO: enable the lines below when refactoring
-    // "react-hooks/rules-of-hooks": 1,
-    // "react-hooks/exhaustive-deps": 1
   }
 }

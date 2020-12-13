@@ -1,14 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import { Layout } from 'src/components/layout/layout'
 import Seo from 'src/components/seo'
 import Image from 'src/components/image'
 
-interface IndexPageProps {}
-
-const IndexPage: React.FC<IndexPageProps> = () => (
-  <Layout>
+const IndexPage: React.FC = () => (
+  <div>
     <Seo title='Home' />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -17,7 +14,7 @@ const IndexPage: React.FC<IndexPageProps> = () => (
       <Image />
     </div>
     <Link to='/page-2/'>Go to page 2</Link>
-  </Layout>
+  </div>
 )
 
 export default IndexPage

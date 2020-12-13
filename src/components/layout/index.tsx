@@ -15,9 +15,7 @@ interface StaticQueryProps {
   }
 }
 
-interface LayoutProps {}
-
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   const data: StaticQueryProps = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -36,3 +34,5 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     </ThemeProvider>
   )
 }
+
+export default Layout
