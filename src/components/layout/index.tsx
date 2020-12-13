@@ -2,8 +2,8 @@ import * as React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { theme } from 'src/theme/theme'
-import { GlobalStyles } from 'src/theme/globalStyles'
+import theme from 'src/assets/styles/theme'
+import GlobalStyles from 'src/assets/styles/globalStyles'
 
 import Header from 'src/components/header'
 

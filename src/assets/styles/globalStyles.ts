@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
-import fontFaces from 'src/fonts'
+import fontFaces from 'src/assets/fonts'
 
-export const GlobalStyles = createGlobalStyle`
+const globalStyles = createGlobalStyle`
   ${fontFaces}
 
   *, *::before, *::after {
@@ -21,3 +21,5 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
   }
 `
+
+export default globalStyles

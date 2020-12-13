@@ -18,7 +18,7 @@ const colors: Colors = {
   lightgray: 'rgb(229, 229, 229',
 }
 
-export const theme: DefaultTheme = {
+const theme: DefaultTheme = {
   ...colors,
   font: {
     weight: {
@@ -50,3 +50,5 @@ export const theme: DefaultTheme = {
     return acc
   }, {} as Record<keyof Breakpoints, string>),
 }
+
+export default theme

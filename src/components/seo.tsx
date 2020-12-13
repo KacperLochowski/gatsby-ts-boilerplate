@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { HelmetProps, Helmet } from 'react-helmet'
 
-import logo from 'src/images/gatsby-icon.png'
+import logo from 'src/assets/images/gatsby-icon.png'
 
 interface SeoProps extends HelmetProps {
   description?: string
