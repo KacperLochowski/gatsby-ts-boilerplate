@@ -5,7 +5,7 @@ import Seo from 'src/components/seo'
 import Image from 'src/components/image'
 
 const IndexPage: React.FC = () => (
-  <div>
+  <>
     <Seo title='Home' />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -14,7 +14,7 @@ const IndexPage: React.FC = () => (
       <Image />
     </div>
     <Link to='/page-2/'>Go to page 2</Link>
-  </div>
+  </>
 )
 
 export default IndexPage
