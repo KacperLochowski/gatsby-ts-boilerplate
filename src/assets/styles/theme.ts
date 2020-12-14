@@ -23,9 +23,6 @@ const theme: DefaultTheme = {
   font: {
     weight: {
       regular: '400',
-      medium: '500',
-      semi: '700',
-      bold: '900',
     },
     size: {
       headers: {

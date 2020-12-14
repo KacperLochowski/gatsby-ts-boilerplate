@@ -14,9 +14,6 @@ interface Font {
 }
 interface FontWeight {
   regular: string
-  medium: string
-  semi: string
-  bold: string
 }
 
 interface FontSize {
