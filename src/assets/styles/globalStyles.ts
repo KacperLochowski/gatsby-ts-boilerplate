@@ -1,9 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
 
-import fontFaces from 'src/assets/fonts'
+import normalize from './normalize'
+import fonts from './fonts'
 
-const globalStyles = createGlobalStyle`
-  ${fontFaces}
+const GlobalStyles = createGlobalStyle`
+  ${normalize}
+  ${fonts}
 
   *, *::before, *::after {
     box-sizing: border-box;
@@ -16,10 +18,10 @@ const globalStyles = createGlobalStyle`
   }
 
   body {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.3rem;
     font-family: 'Poppins', sans-serif;
   }
 `
 
-export default globalStyles
+export default GlobalStyles

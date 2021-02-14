@@ -1,9 +1,26 @@
 {
   "name": "gatsby-ts-boilerplate",
   "private": true,
-  "description": "",
-  "version": "1.0.0",
+  "description": "Gatsby boilerplate with TypeScript",
+  "version": "0.1.0",
   "author": "Kacper Lochowski <kacper.locho@gmail.com>",
+  "keywords": ["reactjs", "gatsbyjs", "static-site-generator", "boilerplate", "typescript"],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KacperLochowski/gatsby-ts-boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/KacperLochowski/gatsby-ts-boilerplate/issues"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.32.3",
@@ -36,27 +53,11 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
+    "gatsby-plugin-remove-trailing-slashes": "^2.10.0",
     "gatsby-plugin-root-import": "^2.0.6",
-    "husky": "^5.0.9",
+    "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
-  },
-  "keywords": [],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/KacperLochowski/gatsby-ts-boilerplate"
-  },
-  "bugs": {
-    "url": "https://github.com/KacperLochowski/gatsby-ts-boilerplate/issues"
   },
   "husky": {
     "hooks": {
